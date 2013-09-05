@@ -1,67 +1,56 @@
 package org.desenrolapp.sopadeletras;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.widget.TextView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
-
-public class MainActivity extends Activity {
-	
-	private TextView output;
+public class MainActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		output = (TextView) findViewById(R.id.sopaLetrasTexto);
 		
+		Button salir = (Button) findViewById(R.id.salir);
+		salir.setOnClickListener(this);
+		
+		Button jugar = (Button) findViewById(R.id.jugar);
+		jugar.setOnClickListener(this);
+	}
+	
+	@Override
+	protected void onDestroy (){
+		super.onDestroy();
+		Toast.makeText(getApplicationContext(),"onDestroy!" , Toast.LENGTH_SHORT).show();
+
+	}
+	
+	@Override
+	protected void onResume(){
+		super.onResume();
+		Toast.makeText(getApplicationContext(),"onResume" , Toast.LENGTH_SHORT).show();
+	}
+	
+	@Override
+	protected void onPause(){
+		super.onPause();
+		Toast.makeText(getApplicationContext(),"onPause" , Toast.LENGTH_SHORT).show();
+
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	public void onClick(View v) {
+		if (v.getId() == findViewById(R.id.salir).getId()){
+			finish();
+		}		
+		else if (v.getId() == findViewById(R.id.jugar).getId()){
+			Intent i = new Intent(this, juego.class);
+			startActivity(i);
+			this.finish();
+		}	
 	}
-
 }
-/**
- * 
-
-public class Main extends Activity implements OnTouchListener {
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
-		TextView entrada = (TextView)findViewById(R.id.TextViewEntrada);
-		entrada.setOnTouchListener(this);
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onTouch(View vista, MotionEvent evento) {
-		TextView salida = (TextView) findViewById(R.id.TextViewSalida);
-	//	salida.append(evento.toString()+"\n" );
-		String acciones[] = { "ACTION_DOWN", "ACTION_UP", "ACTION_MOVE", "ACTION_CANCEL","ACTION_OUTSIDE", "ACTION_POINTER_DOWN", "ACTION_POINTER_UP" };
-		int accion = evento.getAction();
-		int codigoAccion = accion & MotionEvent.ACTION_MASK;
-		salida.append(acciones[codigoAccion]);
-		for (int i = 0; i < evento.getPointerCount(); i++) {
-		salida.append(" puntero:" + evento.getPointerId(i) + 
-		" x:" + evento.getX(i) + " y:" + evento.getY(i));
-		}
-		salida.append("\n");
-		return true;
-	}
-
-}
- * */
- */

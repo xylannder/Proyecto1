@@ -1,0 +1,10 @@
+jupiter
+saturno
+pluton
+kapa
+mercurio
+venus
+urano
+neptuno
+tierra
+marte
