@@ -27,7 +27,7 @@ public class Diagonal2 {
 		int espacioValido = tamañoTablero - Palabra.length() + 1;
 	
 		int ejeX = (int)(Math.random() * espacioValido);
-		int ejeY = (int)(Math.random() * espacioValido) + Palabra.length() - 1;
+		int ejeY = (int)(Math.random() * espacioValido + Palabra.length() - 1);
 	
 		int vectorEjeX [] = new int [Palabra.length()];
 		int vectorEjeY [] = new int [Palabra.length()];
@@ -48,9 +48,9 @@ public class Diagonal2 {
 				 * Encontró un caracter distinto de la letra de relleno, por lo que vamos a dejar el tablero de juego tal y como 
 				 * estaba
 				 * */
-				for (int i = 0; i <= letrasColocadas; i++){
-					int aux = letrasColocadas - i;
-					tableroJuego [vectorEjeY[aux]][vectorEjeX[aux]] = vectorLetras[aux];
+				for (int i = 0; i < letrasColocadas; i++){
+//					int aux = letrasColocadas - i;
+					tableroJuego [vectorEjeY[i]][vectorEjeX[i]] = vectorLetras[i];
 				}
 				correcto = false;
 				break;

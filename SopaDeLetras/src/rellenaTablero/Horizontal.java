@@ -16,7 +16,7 @@ public class Horizontal {
 		/**
 		 * El constructor sólo coloca la primera palabra del tablero, del resto se ocuta actualizaDatos
 		 * */
-		colocaPrimeraPalabra();
+		colocaPalabra();
 	}
 	public char [][] devuelveTableroJuego (){
 		return tableroJuego;
@@ -62,14 +62,4 @@ public class Horizontal {
 	public boolean resultado (){
 		return palabraColocada;
 	}
-	private void colocaPrimeraPalabra() {
-		int ejeXinicial = tamañoTablero - Palabra.length() + 1;
-		int ejeX = (int)(Math.random()*ejeXinicial);
-		int ejeY = (int)(Math.random()*tamañoTablero);
-		for (int k = 0; k < Palabra.length(); k++, ejeX++){
-			tableroJuego[ejeY][ejeX] = Palabra.charAt(k);
-		}
-		palabraColocada = true;
-	}
-
 }

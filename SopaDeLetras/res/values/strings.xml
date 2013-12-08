@@ -7,5 +7,10 @@
     <string name="salir">Salir</string>
     <string name="jugar">Jugar</string>
     <string name="configuracion">Configuración</string>
+    <string name="baseDeDatos">Base de datos</string>
+    <string name="leerBaseDatos">Leer Base de datos</string>
+    <string name="title_activity_leer_base_datos_completa">LeerBaseDatosCompleta</string>
+    <string name="mostrarAtras">Atrás</string>
+    <string name="title_activity_leer_base_datos">LeerBaseDatos</string>
 
 </resources>

@@ -9,6 +9,25 @@ package org.desenrolapp.sopadeletras;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int altoLetras=0x7f010000;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int colorTablero=0x7f010001;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -25,27 +44,38 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int Configuracion=0x7f080002;
-        public static final int LinearLayout1=0x7f080000;
-        public static final int action_settings=0x7f080005;
-        public static final int jugar=0x7f080001;
-        public static final int salir=0x7f080003;
-        public static final int tablero=0x7f080004;
+        public static final int Configuracion=0x7f080004;
+        public static final int LinearLayout1=0x7f080002;
+        public static final int MainBaseDatos=0x7f080006;
+        public static final int action_settings=0x7f080008;
+        public static final int botonAtras=0x7f080001;
+        public static final int botonLeerBaseDatos=0x7f080007;
+        public static final int jugar=0x7f080003;
+        public static final int lista=0x7f080000;
+        public static final int salir=0x7f080005;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int juego=0x7f030001;
+        public static final int activity_leer_base_datos=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int juego=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int leer_base_datos=0x7f070000;
+        public static final int leer_base_datos_completa=0x7f070001;
+        public static final int main=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
+        public static final int baseDeDatos=0x7f050006;
         public static final int configuracion=0x7f050005;
         public static final int hello_world=0x7f050002;
         public static final int jugar=0x7f050004;
+        public static final int leerBaseDatos=0x7f050007;
+        public static final int mostrarAtras=0x7f050009;
         public static final int salir=0x7f050003;
+        public static final int title_activity_leer_base_datos=0x7f05000a;
+        public static final int title_activity_leer_base_datos_completa=0x7f050008;
     }
     public static final class style {
         /** 
@@ -75,4 +105,52 @@ public final class R {
          */
         public static final int AppTheme=0x7f060001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a Tablero.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Tablero_altoLetras org.desenrolapp.sopadeletras:altoLetras}</code></td><td></td></tr>
+           <tr><td><code>{@link #Tablero_colorTablero org.desenrolapp.sopadeletras:colorTablero}</code></td><td></td></tr>
+           </table>
+           @see #Tablero_altoLetras
+           @see #Tablero_colorTablero
+         */
+        public static final int[] Tablero = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link org.desenrolapp.sopadeletras.R.attr#altoLetras}
+          attribute's value can be found in the {@link #Tablero} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:altoLetras
+        */
+        public static final int Tablero_altoLetras = 0;
+        /**
+          <p>This symbol is the offset where the {@link org.desenrolapp.sopadeletras.R.attr#colorTablero}
+          attribute's value can be found in the {@link #Tablero} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:colorTablero
+        */
+        public static final int Tablero_colorTablero = 1;
+    };
 }

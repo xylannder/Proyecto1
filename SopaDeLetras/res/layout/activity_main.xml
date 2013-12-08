@@ -31,4 +31,16 @@
         android:onClick="salir()"
         android:text="@string/salir" />
 
+    <Button
+        android:id="@+id/MainBaseDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/baseDeDatos" />
+
+    <Button
+        android:id="@+id/botonLeerBaseDatos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/leerBaseDatos" />
+
 </LinearLayout>

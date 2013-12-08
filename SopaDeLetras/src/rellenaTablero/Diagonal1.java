@@ -13,9 +13,6 @@ public class Diagonal1 {
 		tableroJuego = tblJuego;
 		tamañoTablero = tam;
 		letraRelleno = lr;
-		/**
-		 * El constructor sólo coloca la primera palabra del tablero, del resto se ocuta actualizaDatos
-		 * */
 		colocaPalabra();
 	}
 	public void actualizaDatos (String palabra, char [][] tblJuego){
@@ -29,12 +26,9 @@ public class Diagonal1 {
 		/**
 		 * Lo primero que hacemos es determinar en que espacio del vector irá alojada la última letra de la palabra
 		 * */
-		int ejeX = (int)(Math.random() * espacioValido) + Palabra.length() -1;
+		int ejeX = (int)(Math.random() * espacioValido + Palabra.length() -1);
 
-		int ejeY = (int)(Math.random() * espacioValido) + Palabra.length() -1;
-		
-	//	System.out.println("Eje x: " +ejeX + " Eje y: " + ejeY);
-		
+		int ejeY = (int)(Math.random() * espacioValido + Palabra.length() -1);
 		/**
 		 * Una vez lo hemos hallado, determinamos donde irá alojada la primera letra
 		 * */
@@ -58,9 +52,10 @@ public class Diagonal1 {
 				 * Encontró un caracter distinto de la letra de relleno, por lo que vamos a dejar el tablero de juego tal y como 
 				 * estaba
 				 * */
-				for (int i = 0; i <= letrasColocadas; i++){
-					int aux = letrasColocadas - i;
-					tableroJuego [vectorEjeY[aux]][vectorEjeX[aux]] = vectorLetras[aux];
+				for (int i = 0; i < letrasColocadas; i++){
+				//	int aux = letrasColocadas - i;
+				//	tableroJuego [vectorEjeY[aux]][vectorEjeX[aux]] = vectorLetras[aux];
+					tableroJuego [vectorEjeY[i]][vectorEjeX[i]] = vectorLetras[i];
 				}
 				correcto = false;
 				break;
