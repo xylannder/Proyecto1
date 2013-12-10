@@ -6,6 +6,10 @@ public class Diagonal2 {
 	private static int tamañoTablero;
 	private static char letraRelleno;
 	public static boolean palabraColocada;
+	private int xInicial;
+	private int yInicial;
+	private int xFinal;
+	private int yFinal;
 //	static boolean primeraPalabra = false; // indica si ya se introdujo la primera palabra en el tablero
 	
 	public Diagonal2 (String palabra, char [][] tblJuego, int tam, char lr){
@@ -28,14 +32,18 @@ public class Diagonal2 {
 	
 		int ejeX = (int)(Math.random() * espacioValido);
 		int ejeY = (int)(Math.random() * espacioValido + Palabra.length() - 1);
+		
+		xInicial = ejeX;
+		yInicial = ejeY;
+
 	
 		int vectorEjeX [] = new int [Palabra.length()];
 		int vectorEjeY [] = new int [Palabra.length()];
 		char vectorLetras [] = new char[Palabra.length()];
 		int letrasColocadas = 0;
 		boolean correcto = true;
-		
-		for (int k = (Palabra.length() - 1), w = 0; k >= 0; k--, ejeX++, ejeY--, w++){
+		int w = 0;
+		for (int k = (Palabra.length() - 1); k >= 0; k--, ejeX++, ejeY--, w++){
 			if (tableroJuego [ejeY][ejeX] == letraRelleno || tableroJuego[ejeY][ejeX] == Palabra.charAt(k)){
 				vectorEjeX[w] = ejeX;
 				vectorEjeY[w] = ejeY;
@@ -56,7 +64,14 @@ public class Diagonal2 {
 				break;
 			}
 		}	
-		if (correcto) palabraColocada = true;
+		if (correcto){
+			xFinal = vectorEjeX[0];
+			yFinal = vectorEjeY[0];
+			yInicial = vectorEjeY[w-1];
+			xInicial = vectorEjeX[w-1];
+
+			palabraColocada = true;
+		}
 		else palabraColocada = false;
 	}
 	public boolean resultado (){
@@ -64,6 +79,30 @@ public class Diagonal2 {
 	}
 	public char [][] devuelveTableroJuego (){
 		return tableroJuego;
+	}
+	public int getxInicial() {
+		return xInicial;
+	}
+	public void setxInicial(int xInicial) {
+		this.xInicial = xInicial;
+	}
+	public int getyInicial() {
+		return yInicial;
+	}
+	public void setyInicial(int yInicial) {
+		this.yInicial = yInicial;
+	}
+	public int getxFinal() {
+		return xFinal;
+	}
+	public void setxFinal(int xFinal) {
+		this.xFinal = xFinal;
+	}
+	public int getyFinal() {
+		return yFinal;
+	}
+	public void setyFinal(int yFinal) {
+		this.yFinal = yFinal;
 	}
 
 }

@@ -1,15 +1,33 @@
 package tablero;
 
 public class PosicionesPalabras {
+	//datos de la palabra
+	private int id;
 	private String palabra;
 	private boolean elegida = false;
-	private int xPixel[];
-	private int yPixel[];
-
-	private int xTablero[];
-	private int yTablero[];
+	private boolean mostradaPantalla = false;
 	
-	PosicionesPalabras (){}
+	//posición en la pantalla
+	private int xPixelInicial;
+	private int yPixelInicial;
+	private int xPixelFinal;
+	private int yPixelFinal;
+	
+	//posición en la matriz
+	private int xTableroFinal;
+	private int yTableroFinal;
+	private int xTableroInicial;
+	private int yTableroInicial;
+	
+	public PosicionesPalabras (){}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getPalabra() {
 		return palabra;
@@ -27,36 +45,75 @@ public class PosicionesPalabras {
 		this.elegida = elegida;
 	}
 
-	public int[] getxPixel() {
-		return xPixel;
+	public int getxPixelInicial() {
+		return xPixelInicial;
 	}
 
-	public void setxPixel(int[] xPixel) {
-		this.xPixel = xPixel;
+	public void setxPixelInicial(int xPixelInicial) {
+		this.xPixelInicial = xPixelInicial;
 	}
 
-	public int[] getyPixel() {
-		return yPixel;
+	public int getyPixelInicial() {
+		return yPixelInicial;
 	}
 
-	public void setyPixel(int[] yPixel) {
-		this.yPixel = yPixel;
+	public void setyPixelInicial(int yPixelInicial) {
+		this.yPixelInicial = yPixelInicial;
 	}
 
-	public int[] getxTablero() {
-		return xTablero;
+	public int getxTableroFinal() {
+		return xTableroFinal;
 	}
 
-	public void setxTablero(int[] xTablero) {
-		this.xTablero = xTablero;
+	public void setxTableroFinal(int xTableroFinal) {
+		this.xTableroFinal = xTableroFinal;
 	}
 
-	public int[] getyTablero() {
-		return yTablero;
+	public int getyTableroFinal() {
+		return yTableroFinal;
 	}
 
-	public void setyTablero(int[] yTablero) {
-		this.yTablero = yTablero;
+	public void setyTableroFinal(int yTableroFinal) {
+		this.yTableroFinal = yTableroFinal;
 	}
-	
+
+	public int getxPixelFinal() {
+		return xPixelFinal;
+	}
+
+	public void setxPixelFinal(int xPixelFinal) {
+		this.xPixelFinal = xPixelFinal;
+	}
+
+	public int getyPixelFinal() {
+		return yPixelFinal;
+	}
+
+	public void setyPixelFinal(int yPixelFinal) {
+		this.yPixelFinal = yPixelFinal;
+	}
+
+	public int getxTableroInicial() {
+		return xTableroInicial;
+	}
+
+	public void setxTableroInicial(int xTableroIicial) {
+		this.xTableroInicial = xTableroIicial;
+	}
+
+	public int getyTableroInicial() {
+		return yTableroInicial;
+	}
+
+	public void setyTableroInicial(int yTableroInicial) {
+		this.yTableroInicial = yTableroInicial;
+	}
+
+	public boolean getMostradaPantalla() {
+		return mostradaPantalla;
+	}
+
+	public void setMonstradaPantalla(boolean monstradaPantalla) {
+		this.mostradaPantalla = monstradaPantalla;
+	}
 }

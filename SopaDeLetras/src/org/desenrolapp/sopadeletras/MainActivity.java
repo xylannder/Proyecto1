@@ -32,23 +32,23 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		Toast.makeText(getApplicationContext(), "onDestroy!",
-				Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getApplicationContext(), "onDestroy!",
+//				Toast.LENGTH_SHORT).show();
 
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		Toast.makeText(getApplicationContext(), "onResume", Toast.LENGTH_SHORT)
-				.show();
+//		Toast.makeText(getApplicationContext(), "onResume", Toast.LENGTH_SHORT)
+//				.show();
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		Toast.makeText(getApplicationContext(), "onPause", Toast.LENGTH_SHORT)
-				.show();
+//		Toast.makeText(getApplicationContext(), "onPause", Toast.LENGTH_SHORT)
+//				.show();
 
 	}
 
@@ -74,7 +74,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			gdb.anadirNotas("planetas" ,"neptuno");
 			gdb.anadirNotas("planetas" ,"pluton");		
 			gdb.cerrar();
-			Toast.makeText(getApplicationContext(),"Palabras agregadas correctamente." , Toast.LENGTH_SHORT).show();
+//			Toast.makeText(getApplicationContext(),"Palabras agregadas correctamente." , Toast.LENGTH_SHORT).show();
 		}
 		else if (v.getId() == findViewById(R.id.botonLeerBaseDatos).getId()){
 			Intent i = new Intent(this, LeerBaseDatos.class);

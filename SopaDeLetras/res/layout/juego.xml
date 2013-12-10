@@ -5,9 +5,4 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <org.desenrolapp.sopadeletras.Tablero
-        android:layout_width="match_parent"
-        app:altoLetras="16dp"
-     />
-
 </LinearLayout>

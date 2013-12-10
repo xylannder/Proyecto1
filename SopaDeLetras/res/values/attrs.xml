@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="Tablero">
+    <declare-styleable name="VistaTablero">
+        <attr name="colorLetras" format="color" />
         <attr name="altoLetras" format="dimension" />
-        <attr name="colorTablero" format="color" />
     </declare-styleable>
 </resources>

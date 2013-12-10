@@ -18,7 +18,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int altoLetras=0x7f010000;
+        public static final int altoLetras=0x7f010001;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -27,7 +27,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int colorTablero=0x7f010001;
+        public static final int colorLetras=0x7f010000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -106,24 +106,24 @@ containing a value of this type.
         public static final int AppTheme=0x7f060001;
     }
     public static final class styleable {
-        /** Attributes that can be used with a Tablero.
+        /** Attributes that can be used with a VistaTablero.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Tablero_altoLetras org.desenrolapp.sopadeletras:altoLetras}</code></td><td></td></tr>
-           <tr><td><code>{@link #Tablero_colorTablero org.desenrolapp.sopadeletras:colorTablero}</code></td><td></td></tr>
+           <tr><td><code>{@link #VistaTablero_altoLetras org.desenrolapp.sopadeletras:altoLetras}</code></td><td></td></tr>
+           <tr><td><code>{@link #VistaTablero_colorLetras org.desenrolapp.sopadeletras:colorLetras}</code></td><td></td></tr>
            </table>
-           @see #Tablero_altoLetras
-           @see #Tablero_colorTablero
+           @see #VistaTablero_altoLetras
+           @see #VistaTablero_colorLetras
          */
-        public static final int[] Tablero = {
+        public static final int[] VistaTablero = {
             0x7f010000, 0x7f010001
         };
         /**
           <p>This symbol is the offset where the {@link org.desenrolapp.sopadeletras.R.attr#altoLetras}
-          attribute's value can be found in the {@link #Tablero} array.
+          attribute's value can be found in the {@link #VistaTablero} array.
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -136,10 +136,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name android:altoLetras
         */
-        public static final int Tablero_altoLetras = 0;
+        public static final int VistaTablero_altoLetras = 1;
         /**
-          <p>This symbol is the offset where the {@link org.desenrolapp.sopadeletras.R.attr#colorTablero}
-          attribute's value can be found in the {@link #Tablero} array.
+          <p>This symbol is the offset where the {@link org.desenrolapp.sopadeletras.R.attr#colorLetras}
+          attribute's value can be found in the {@link #VistaTablero} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -149,8 +149,8 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name android:colorTablero
+          @attr name android:colorLetras
         */
-        public static final int Tablero_colorTablero = 1;
+        public static final int VistaTablero_colorLetras = 0;
     };
 }

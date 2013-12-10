@@ -6,6 +6,11 @@ public class Horizontal {
 	private static int tamañoTablero;
 	private static char letraRelleno;
 	public static boolean palabraColocada;
+	private int xInicial;
+	private int yInicial;
+	private int xFinal;
+	private int yFinal;
+
 //	static boolean primeraPalabra = false; // indica si ya se introdujo la primera palabra en el tablero
 	
 	public Horizontal (String palabra, char [][] tblJuego, int tam, char lr){
@@ -30,13 +35,17 @@ public class Horizontal {
 		int ejeXinicial = tamañoTablero - Palabra.length() + 1;
 		int ejeX = (int)(Math.random()*ejeXinicial);
 		int ejeY = (int)(Math.random()*tamañoTablero);
+		
+		xInicial = ejeX;
+		yInicial = ejeY;
+		
 		int vectorEjeX [] = new int [tamañoTablero];
 		int vectorEjeY [] = new int [tamañoTablero];
 		char vectorLetras [] = new char[tamañoTablero];
 		int letrasColocadas = 0;
 		boolean correcto = true;
-		
-		for (int k = 0; k < Palabra.length(); k++, ejeX++){
+		int k = 0;
+		for (; k < Palabra.length(); k++, ejeX++){
 			if (tableroJuego [ejeY][ejeX] == letraRelleno || tableroJuego[ejeY][ejeX] == Palabra.charAt(k)){
 				vectorEjeX[k] = ejeX;
 				vectorEjeY[k] = ejeY;
@@ -56,10 +65,40 @@ public class Horizontal {
 				break;
 			}
 		}	
-		if (correcto) palabraColocada = true;
+		if (correcto){
+			xFinal = vectorEjeX[k-1];
+			yFinal = vectorEjeY[k-1];
+
+			palabraColocada = true;
+		}
 		else palabraColocada = false;
 	}
 	public boolean resultado (){
 		return palabraColocada;
 	}
+	public int getxInicial() {
+		return xInicial;
+	}
+	public void setxInicial(int xInicial) {
+		this.xInicial = xInicial;
+	}
+	public int getyInicial() {
+		return yInicial;
+	}
+	public void setyInicial(int yInicial) {
+		this.yInicial = yInicial;
+	}
+	public int getxFinal() {
+		return xFinal;
+	}
+	public void setxFinal(int xFinal) {
+		this.xFinal = xFinal;
+	}
+	public int getyFinal() {
+		return yFinal;
+	}
+	public void setyFinal(int yFinal) {
+		this.yFinal = yFinal;
+	}
+	
 }
